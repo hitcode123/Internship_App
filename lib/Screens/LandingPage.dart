@@ -13,71 +13,73 @@ class SecondAuthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: background,
-        body: Column(
-          children: [
-            Image.asset(
-              "Asset/pic2.png",
-              cacheHeight: 380,
-              width: double.infinity,
-              fit: BoxFit.cover,
-            ),
-            SizedBox(
-              height: 55,
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => ThirdAuthPage()));
-              },
-              child: Container(
-                child: Center(
-                  child: Text(
-                    "Gets Started",
-                    style: TextStyle(color: Colors.white),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                height: 50,
-                width: 300,
-                decoration: BoxDecoration(
-                    color: Colors.deepPurpleAccent,
-                    borderRadius: BorderRadius.circular(4)),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Image.asset(
+                "Asset/pic2.png",
+                width: double.infinity,
+                fit: BoxFit.cover,
+                height: 420,
               ),
-            ),
-            SizedBox(
-              height: 67,
-            ),
-            Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Already have an account?",
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.w500),
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => FourthPageAuth()));
-                    },
+              SizedBox(
+                height: 35,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => ThirdAuthPage()));
+                },
+                child: Container(
+                  child: Center(
                     child: Text(
-                      "Sign in",
-                      style: TextStyle(color: Colors.blue),
+                      "Gets Started",
+                      style: TextStyle(color: Colors.white),
+                      textAlign: TextAlign.center,
                     ),
-                    style: ButtonStyle(
-                      textStyle: MaterialStateProperty.all(
-                        TextStyle(fontWeight: FontWeight.w700),
+                  ),
+                  height: 50,
+                  width: 300,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurpleAccent,
+                      borderRadius: BorderRadius.circular(4)),
+                ),
+              ),
+              SizedBox(
+                height: 27,
+              ),
+              Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Already have an account?",
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.w500),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => FourthPageAuth()));
+                      },
+                      child: Text(
+                        "Sign in",
+                        style: TextStyle(color: Colors.blue),
+                      ),
+                      style: ButtonStyle(
+                        textStyle: MaterialStateProperty.all(
+                          TextStyle(fontWeight: FontWeight.w700),
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-            )
-          ],
+                  ],
+                ),
+              )
+            ],
+          ),
         ));
   }
 }

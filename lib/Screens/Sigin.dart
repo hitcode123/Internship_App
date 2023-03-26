@@ -13,6 +13,7 @@ class FourthPageAuth extends StatefulWidget {
 }
 
 class _FourthPageAuthState extends State<FourthPageAuth> {
+  bool isbool = false;
   final TextEditingController _email = TextEditingController();
   final TextEditingController _password = TextEditingController();
   @override
@@ -82,9 +83,24 @@ class _FourthPageAuthState extends State<FourthPageAuth> {
                         color: const Color.fromRGBO(24, 32, 46, 1),
                         child: TextFormField(
                           controller: _password,
+                          obscureText: isbool == true ? true : false,
                           style: TextStyle(color: Colors.white),
-                          decoration: const InputDecoration(
-                            suffixIcon: Icon(Icons.visibility_off),
+                          decoration: InputDecoration(
+                            suffixIcon: isbool == true
+                                ? IconButton(
+                                    icon: Icon(Icons.visibility_off),
+                                    onPressed: () {
+                                      setState(() {
+                                        isbool = false;
+                                      });
+                                    })
+                                : IconButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        isbool = true;
+                                      });
+                                    },
+                                    icon: Icon(Icons.visibility_sharp)),
                             suffixIconColor: Colors.white60,
                             labelText: 'Password',
                             labelStyle: TextStyle(

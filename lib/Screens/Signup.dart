@@ -82,6 +82,7 @@ class _ThirdAuthPageState extends State<ThirdAuthPage> {
                           color: Color.fromRGBO(24, 32, 46, 1),
                           child: TextFormField(
                             controller: _password,
+                            obscureText: true,
                             style: TextStyle(color: Colors.white),
                             decoration: InputDecoration(
                               labelText: 'Password',
