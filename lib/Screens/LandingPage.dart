@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:internship_project/Screens/Authprovider.dart';
 
 import 'package:internship_project/Screens/Signup.dart';
+import 'package:internship_project/config.dart';
 
 import 'Sigin.dart';
 
@@ -11,10 +12,15 @@ class SecondAuthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 15, 22, 23),
+        backgroundColor: background,
         body: Column(
           children: [
-            Image.asset("Asset/pic2.png", cacheHeight: 380),
+            Image.asset(
+              "Asset/pic2.png",
+              cacheHeight: 380,
+              width: double.infinity,
+              fit: BoxFit.cover,
+            ),
             SizedBox(
               height: 55,
             ),
@@ -39,7 +45,7 @@ class SecondAuthScreen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 51,
+              height: 67,
             ),
             Center(
               child: Row(

@@ -488,14 +488,14 @@ class _HomeState extends State<Home> {
                           padding: const EdgeInsets.only(top: 16.0),
                           child: Row(
                             children: [
-                              SizedBox(
+                              const SizedBox(
                                 width: 8,
                               ),
                               Image.asset('Asset/pic9.png'),
-                              SizedBox(
+                              const SizedBox(
                                 width: 8,
                               ),
-                              Text(
+                              const Text(
                                 "Nearest Laundry",
                                 style: TextStyle(
                                     color: Colors.white, fontFamily: 'Inter'),
@@ -505,7 +505,7 @@ class _HomeState extends State<Home> {
                                 margin: EdgeInsets.only(left: 50),
                                 height: 35,
                                 width: 90,
-                                padding: EdgeInsets.only(
+                                padding: const EdgeInsets.only(
                                     top: 7, bottom: 7, right: 7, left: 7),
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(30),
@@ -515,7 +515,7 @@ class _HomeState extends State<Home> {
                                 child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
-                                    children: [
+                                    children: const [
                                       Text(
                                         "See All",
                                         style: TextStyle(
@@ -533,9 +533,10 @@ class _HomeState extends State<Home> {
                             ],
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
+                        // ignore: avoid_unnecessary_containers
                         Container(
                           child: SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
@@ -556,10 +557,10 @@ class _HomeState extends State<Home> {
                                                   'Asset/pic8.png',
                                                   fit: BoxFit.fill,
                                                 ))),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 15,
                                         ),
-                                        Text(
+                                        const Text(
                                           "Nearest Laundry",
                                           style: TextStyle(
                                               color: Colors.white,
@@ -582,10 +583,10 @@ class _HomeState extends State<Home> {
                                                   'Asset/pic10.png',
                                                   fit: BoxFit.fill,
                                                 ))),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 15,
                                         ),
-                                        Text(
+                                        const Text(
                                           "Nearest Laundry",
                                           style: TextStyle(
                                               color: Colors.white,
@@ -596,9 +597,11 @@ class _HomeState extends State<Home> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.all(10.0),
+                                    // ignore: avoid_unnecessary_containers
                                     child: Container(
                                         child: Column(
                                       children: [
+                                        // ignore: sized_box_for_whitespace
                                         Container(
                                             height: 140,
                                             child: ClipRRect(
@@ -608,10 +611,11 @@ class _HomeState extends State<Home> {
                                                   'Asset/pic10.png',
                                                   fit: BoxFit.fill,
                                                 ))),
+                                        // ignore: prefer_const_constructors
                                         SizedBox(
                                           height: 15,
                                         ),
-                                        Text(
+                                        const Text(
                                           "Nearest Laundry",
                                           style: TextStyle(
                                               color: Colors.white,
@@ -624,9 +628,11 @@ class _HomeState extends State<Home> {
                               )),
                         ),
                       ])),
+              const SizedBox(
+                height: 18,
+              ),
               Container(
                 height: 70,
-                margin: EdgeInsets.only(top: 16, left: 14, right: 14),
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: const Color.fromRGBO(24, 32, 46, 1),
